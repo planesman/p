@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>WTP</title>
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <script src="scripts/app.js"></script>
+    <script src="scripts/jquery-1.8.3.js"></script>
+    <script src="scripts/knockout-2.2.0.debug.js"></script>
+
+    <script type="text/javascript" src="scripts/coin-slider.min.js"></script>
+    <link rel="stylesheet" href="css/coin-slider-styles.css" type="text/css" />
+</head>
+<body data-bind="with:model">
+
+    <div class="header">WTP</div>
+    <div class="question">
+        <div class="question__text" data-bind="text: question"></div>
+        <div class="answers" data-bind="foreach: answers">
+            <div class="answer">
+                <div class="answer__images" data-bind="foreach: planes">
+                    <div class="answer__imagecontainer">
+                        <a data-bind="attr: {href: 'images/'+image+'.jpg'}" >
+                            <div class="answer__image" data-bind="style: { backgroundImage : 'url(images/m' + image + '.jpg)' }">
+                            </div>
+                        </a>
+                        <div class="answer__image__overlay">
+                            <a class="answer__this-is-it" data-bind="text: name" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="answer__text" data-bind="text: text, click:setAnswer" href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="history" >
+        <ul data-bind="foreach: myanswers">
+            <li data-bind="text:text">
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

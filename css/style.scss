@@ -1,0 +1,57 @@
+div {
+    display:inline-block;
+}
+
+.header {
+    font-size:20px;
+    height: 100px;
+}
+
+.question {
+    position:relative;
+    top:100px;
+    width:960px;
+    border: 1px solid black;
+    background-color:Wheat;
+}
+
+.question__text {
+    display:block;
+    text-align:center;
+}
+
+.answer {
+    width:200px;
+    height:200px;
+}
+
+.answer__images
+{
+    width: 200px;
+    height:220px;
+    overflow:hidden;
+}
+
+
+.answer__image__overlay {
+    top: 200px;
+    left: 3px;
+    position: absolute;
+}
+
+.answer__imagecontainer
+{
+    width: 200px;
+    height:220px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.answer__image {
+    width: 200px;
+    height:200px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
